@@ -1,0 +1,13 @@
+/dev
+/var/
+/media/*
+!/media/board
+/errors/local.xml
+/app/etc/local.xml
+error_log
+_aitoc_filelists
+.htaccess
+/wp/
+robots.txt
+lib/dompdf6/lib/fonts/log.htm
+htusers
