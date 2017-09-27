@@ -1,0 +1,60 @@
+/* bojanStyle */
+
+/* Font Styles */
+/*
+  Font "Releway i s already specified in a RWD theme on the page.xml using
+  <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>"
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+/* Primary Buttons */
+.actions .button,
+.product-view .add-to-cart-buttons .button {
+    background: purple;
+  }
+.ajax-ok-notification {
+  color: purple;
+}
+
+/* Plus Minus Qty */
+.plus-minus {
+  float: left;
+}
+.plus-minus a {
+  color: purple;
+  display: flex;
+  text-align: center;
+}
+.plus-minus a:hover {
+  text-decoration: none;
+}
+.plus-minus a:focus {
+  border: 0;
+  outline: 0;
+}
+.decrement_qty:before {
+ line-height: 20px;
+ vertical-align: middle;
+ background: #f4f4f4;
+ content: "\2212";
+ display: inline-block;
+ height: 20px;
+ width: 20px;
+}
+
+.increment_qty:before {
+   line-height: 20px;
+   vertical-align: middle;
+   background: #f4f4f4;
+   content: "\002B";
+   display: inline-block;
+   height: 20px;
+   width: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .products-grid > li:nth-child(4n) > a.product-image{
+      border: 3px solid red;
+  }
+
+}
