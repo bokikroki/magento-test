@@ -8,16 +8,16 @@ function ajaxAddToCart(url, product, form_key){
     ajaxShowNotification(product);
 
     var cart = this;
-    url += 'isAjax/1';
+    // url += 'isAjax/1';
     console.log(cart);
     jQuery.ajax({
         type: 'POST',
         dataType: 'json',
-        url: url
+        url: '/checkout/cart/add/uenc/'
     }).done(function(result) {
 
         if (result.success) {
-            console.log(response);
+            // console.log(response);
             ajaxShowNotification(product);
             cart.updateCartQty(result.qty);
             cart.updateContentOnRemove(result, el.closest('li'));
@@ -25,7 +25,7 @@ function ajaxAddToCart(url, product, form_key){
             cart.showMessage(result);
         }
     }).error(function(xhr) {
-        console.log('Error mesage');
+        // console.log('Error mesage');
     });
 
 
