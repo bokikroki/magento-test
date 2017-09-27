@@ -1,5 +1,6 @@
 function ajaxAddToCart(url, product, form_key){
     hideMinicartStubs();
+    //since it is an simple probuct, from a category list page, I'm using this options
     if (jQuery('body').hasClass('catalog-category-view')) {
       var qty = 1;
     }
@@ -12,11 +13,7 @@ function ajaxAddToCart(url, product, form_key){
     jQuery.ajax({
         type: 'POST',
         dataType: 'json',
-        url: url,
-        success:function(data) {
-          console.log('Sad je Ok');
-        }
-
+        url: url
     }).done(function(result) {
 
         if (result.success) {
